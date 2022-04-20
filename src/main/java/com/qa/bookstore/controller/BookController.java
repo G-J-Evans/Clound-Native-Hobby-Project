@@ -39,25 +39,46 @@ public class BookController {
 			return new ResponseEntity<>(this.service.getAll(), HttpStatus.OK);
 	}
 	
-	//read one by id
-	@GetMapping("/get/{id}") // 200 - OK
+	//read one by id / 200 - OK
+	@GetMapping("/get/{id}")
 	public ResponseEntity<Book> getOne(@PathVariable Integer id) {
 			return new ResponseEntity<>(this.service.getOne(id), HttpStatus.OK);
 	}
 	
-	//update
-	@PutMapping("/replace/{id}") // 202 - ACCEPTED
+	//update / 202 - ACCEPTED
+	@PutMapping("/replace/{id}") 
 	public ResponseEntity<Book> replace(@PathVariable Integer id, @RequestBody Book book) {
 			return new ResponseEntity<>(this.service.replace(id,book), HttpStatus.ACCEPTED);
 	}
 	
-	//delete
-	@DeleteMapping("/remove/{id}") // 204 - NO CONTENT
+	//delete / 204 - NO CONTENT
+	@DeleteMapping("/remove/{id}")
 	public ResponseEntity<?> delete(@PathVariable Integer id) {
 			this.service.remove(id);
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 	
+	// read by author / 200 -OK
+	@GetMapping("/author/{author}") 
+	public ResponseEntity<List<Book>> getByAuthor(@PathVariable String author) {
+		return new ResponseEntity<>(this.service.getByAuthor(author), HttpStatus.OK);
+	}
 	
+	// read by author / 200 -OK
+	@GetMapping("/title/{title}") 
+	public ResponseEntity<List<Book>> getByTitle(@PathVariable String title) {
+		return new ResponseEntity<>(this.service.getByTitle(title), HttpStatus.OK);
+	}
 	
+	// read by author / 200 -OK
+	@GetMapping("/genre/{genre}") 
+	public ResponseEntity<List<Book>> getByGenre(@PathVariable String genre) {
+		return new ResponseEntity<>(this.service.getByGenre(genre), HttpStatus.OK);
+	}
+	
+	// read by author / 200 -OK
+	@GetMapping("/year/{publicationYear}") 
+	public ResponseEntity<List<Book>> getByPublicationYear(@PathVariable Integer publicationYear) {
+		return new ResponseEntity<>(this.service.getByPublicationYear(publicationYear), HttpStatus.OK);
+	}
 }

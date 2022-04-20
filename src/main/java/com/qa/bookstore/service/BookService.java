@@ -19,11 +19,13 @@ public class BookService implements ServiceIF<Book>{
 		this.repo = repo;
 	}
 	
+	// Create
 	@Override
 	public Book create(Book book) {
 		return this.repo.save(book);
 	}
 
+	// Read functions
 	@Override
 	public List<Book> getAll() {
 		return this.repo.findAll();
@@ -33,7 +35,24 @@ public class BookService implements ServiceIF<Book>{
 	public Book getOne(Integer id) {
 		return this.repo.findById(id).get();
 	}
-
+	
+	public List<Book> getByTitle(String title) {
+		return this.repo.findByTitleIgnoreCase(title);
+	}
+	
+	public List<Book> getByAuthor(String author) {
+		return this.repo.findByAuthorIgnoreCase(author);
+	}
+	
+	public List<Book> getByGenre(String genre) {
+		return this.repo.findByGenreIgnoreCase(genre);
+	}
+	
+	public List<Book> getByPublicationYear(Integer year) {
+		return this.repo.findByPublicationYear(year);
+	}
+	
+	// Update
 	@Override
 	public Book replace(Integer id, Book newBook) {
 		Book existing = this.repo.findById(id).get();
@@ -44,6 +63,7 @@ public class BookService implements ServiceIF<Book>{
 		return this.repo.save(existing);
 	}
 
+	// Delete
 	@Override
 	public void remove(Integer id) {
 		this.repo.deleteById(id);
