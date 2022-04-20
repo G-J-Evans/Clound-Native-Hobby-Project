@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.bookstore.domain.Book;
+import com.qa.bookstore.service.BookService;
 
 @RestController
 public class BookController {
