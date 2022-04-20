@@ -14,7 +14,7 @@ public class Book {
 		private Integer id;
 		
 		@Column
-		private String name;
+		private String title;
 		
 		@Column
 		private String author;
@@ -31,7 +31,7 @@ public class Book {
 		public Book(Integer id, String name, String author, String genre, Integer publicationYear) {
 			super();
 			this.id = id;
-			this.name = name;
+			this.title = name;
 			this.author = author;
 			this.genre = genre;
 			this.publicationYear = publicationYear;
@@ -43,11 +43,11 @@ public class Book {
 		public void setId(Integer id) {
 			this.id = id;
 		}
-		public String getName() {
-			return name;
+		public String getTitle() {
+			return title;
 		}
-		public void setName(String name) {
-			this.name = name;
+		public void setTitle(String name) {
+			this.title = name;
 		}
 		public String getAuthor() {
 			return author;
@@ -70,7 +70,7 @@ public class Book {
 		
 		@Override
 		public String toString() {
-			return "Book [id=" + id + ", name=" + name + ", author=" + author + ", genre=" + genre
+			return "Book [id=" + id + ", name=" + title + ", author=" + author + ", genre=" + genre
 					+ ", publicationYear=" + publicationYear + "]";
 		}
 }
