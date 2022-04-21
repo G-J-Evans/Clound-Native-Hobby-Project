@@ -31,11 +31,13 @@
     <form id="form">
         <!-- Buttons for readby -->
         <div style="display:none" id="searchButtons">
+            What would you like to search by?<br/>
             <button type="button" class="btn btn-success" id="readIDButton">ID</button>
             <button type="button" class="btn btn-success" id="readTitleButton">Title</button>
             <button type="button" class="btn btn-success" id="readAuthorButton">Author</button>
             <button type="button" class="btn btn-success" id="readGenreButton" >Genre</button>
             <button type="button" class="btn btn-success" id="readPublicationYearButton">Publication Year</button>
+            <button type="button" class="btn btn-danger" id="readRandomButton">Random</button>
         </div>
         <!-- Input fields -->
         <div class="form-group" id="inputID" style="display:none">
@@ -98,12 +100,6 @@
             </tr>
         </thead>
         <tbody id="output">
-            <tr>
-                <th scope="row">1</th>
-                <td>Reading</td>
-                <td>A</td>
-                <td>2020</td>
-            </tr>
         </tbody>
     </table>
       

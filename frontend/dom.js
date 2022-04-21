@@ -10,13 +10,14 @@ export const deleteButton = document.querySelector('#deleteButton');
 // form
 export const form = document.querySelectorAll("form > div");
 
-// Further Selector buttons for searching
+// readby Selector buttons for searching
 export const searchButtons = document.querySelector('#searchButtons');
 export const readIDButton = document.querySelector('#readIDButton');
 export const readTitleButton = document.querySelector('#readTitleButton');
 export const readAuthorButton = document.querySelector('#readAuthorButton');
 export const readGenreButton = document.querySelector('#readGenreButton');
 export const readPublicationYearButton = document.querySelector('#readPublicationYearButton');
+export const readRandomButton = document.querySelector('#readRandomButton');
 
 // fields in form
 export const inputID = document.querySelector('#inputID');
