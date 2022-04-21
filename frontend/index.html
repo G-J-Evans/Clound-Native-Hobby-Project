@@ -20,35 +20,78 @@
     <p>Welcome to the book BookStorage. A place for you to store books and see what books others have stored.</p>
 
     <p>What would you like to do?</p>
-    <button type="button" class="btn btn-primary">Add a book</button>
-    <button type="button" class="btn btn-success">Look at all the books</button>
-    <button type="button" class="btn btn-success">Search for a book(s)</button>
-    <button type="button" class="btn btn-warning">Update a book</button>
-    <button type="button" class="btn btn-danger">Delete a book</button>
+    <button type="button" class="btn btn-primary" id="createButton">Add a book</button>
+    <button type="button" class="btn btn-success" id="readAllButton">Look at all the books</button>
+    <button type="button" class="btn btn-success" id="readByButton">Search for a book(s)</button>
+    <button type="button" class="btn btn-warning" id="updateButton">Update a book</button>
+    <button type="button" class="btn btn-danger" id="deleteButton">Delete a book</button>
+    <br/>
+    <br/>
 
-    <div class="form-group">
-        <label for="title">Title:</label>
-        <input type="text" class="form-control" id="title">
-    </div>
-    <div class="form-group">
-        <label for="author">Author:</label>
-        <input type="password" class="form-control" id="author">
-    </div>
-    <div class="form-group">
-        <label for="genre">Genre:</label>
-        <input type="text" class="form-control" id="genre">
-    </div>
-    <div class="form-group">
-        <label for="publicationYear">Publication Year:</label>
-        <input type="password" class="form-control" id="publicationYear">
-    </div>
-    
+    <form id="form">
+        <!-- Buttons for readby -->
+        <div style="display:none" id="searchButtons">
+            <button type="button" class="btn btn-success" id="readIDButton">ID</button>
+            <button type="button" class="btn btn-success" id="readTitleButton">Title</button>
+            <button type="button" class="btn btn-success" id="readAuthorButton">Author</button>
+            <button type="button" class="btn btn-success" id="readGenreButton" >Genre</button>
+            <button type="button" class="btn btn-success" id="readPublicationYearButton">Publication Year</button>
+        </div>
+        <!-- Input fields -->
+        <div class="form-group" id="inputID" style="display:none">
+            <label for="id">ID:</label>
+            <input type="integer" class="form-control" id="id">
+        </div>
+        <div class="form-group" id="inputTitle" style="display:none">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title">
+        </div>
+        <div class="form-group" id="inputAuthor" style="display:none">
+            <label for="author">Author:</label>
+            <input type="text" class="form-control" id="author">
+        </div>
+        <div class="form-group" id="inputGenre" style="display:none">
+            <label for="genre">Genre:</label>
+            <input type="text" class="form-control" id="genre">
+        </div>
+        <div class="form-group" id="inputPublicationYear" style="display:none">
+            <label for="publicationYear">Publication Year:</label>
+            <input type="integer" class="form-control" id="publicationYear">
+        </div>
+        <br/>
+        <!-- Confirmation Buttons -->
+        <div style="display:none" id="createContainer">
+            <button type="button" class="btn btn-primary" id="createConfirmButton">Add</button>
+        </div>
+        <div style="display:none" id="searchIDContainer">
+            <button type="button" class="btn btn-success" id="searchIDConfirmButton">ID Search</button>
+        </div>
+        <div style="display:none" id="searchTitleContainer">
+            <button type="button" class="btn btn-success" id="searchTitleConfirmButton">Title Search</button>
+        </div>
+        <div style="display:none" id="searchAuthorContainer">
+            <button type="button" class="btn btn-success" id="searchAuthorConfirmButton">Author Search</button>
+        </div>
+        <div style="display:none" id="searchGenreContainer">
+            <button type="button" class="btn btn-success" id="searchGenreConfirmButton">Genre Search</button>
+        </div>
+        <div style="display:none" id="searchPublicationYearContainer">
+            <button type="button" class="btn btn-success" id="searchPublicationYearConfirmButton">Publication Year Search</button>
+        </div>
+        <div style="display:none" id="updateContainer">
+            <button type="button" class="btn btn-warning" id="updateConfirmButton" >Update</button>
+        </div>
+        <div style="display:none" id="deleteContainer">
+            <button type="button" class="btn btn-danger" id="deleteConfirmButton">Delete</button>
+        </div>
+    </form>
+    <br/>
 
     <table class="table table-hover table-bordered table-dark">
         <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Title</th>
+                <th scope="col">Title</th>  
                 <th scope="col">Author</th>
                 <th scope="col">Genre</th>
                 <th scope="col">Publication Year</th>
