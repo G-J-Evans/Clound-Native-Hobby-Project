@@ -58,27 +58,33 @@ public class BookController {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 	
-	// read by author / 200 -OK
+	// read by author / 200 - OK
 	@GetMapping("/author/{author}") 
-	public ResponseEntity<List<Book>> getByAuthor(@PathVariable String author) {
-		return new ResponseEntity<>(this.service.getByAuthor(author), HttpStatus.OK);
+	public ResponseEntity<List<Book>> getAuthor(@PathVariable String author) {
+		return new ResponseEntity<>(this.service.getAuthor(author), HttpStatus.OK);
 	}
 	
-	// read by author / 200 -OK
+	// read by title / 200 - OK
 	@GetMapping("/title/{title}") 
-	public ResponseEntity<List<Book>> getByTitle(@PathVariable String title) {
-		return new ResponseEntity<>(this.service.getByTitle(title), HttpStatus.OK);
+	public ResponseEntity<List<Book>> getTitle(@PathVariable String title) {
+		return new ResponseEntity<>(this.service.getTitle(title), HttpStatus.OK);
 	}
 	
-	// read by author / 200 -OK
+	// read by genre / 200 - OK
 	@GetMapping("/genre/{genre}") 
-	public ResponseEntity<List<Book>> getByGenre(@PathVariable String genre) {
-		return new ResponseEntity<>(this.service.getByGenre(genre), HttpStatus.OK);
+	public ResponseEntity<List<Book>> getGenre(@PathVariable String genre) {
+		return new ResponseEntity<>(this.service.getGenre(genre), HttpStatus.OK);
 	}
 	
-	// read by author / 200 -OK
+	// read by publication year / 200 - OK
 	@GetMapping("/year/{publicationYear}") 
-	public ResponseEntity<List<Book>> getByPublicationYear(@PathVariable Integer publicationYear) {
-		return new ResponseEntity<>(this.service.getByPublicationYear(publicationYear), HttpStatus.OK);
+	public ResponseEntity<List<Book>> getPublicationYear(@PathVariable Integer publicationYear) {
+		return new ResponseEntity<>(this.service.getPublicationYear(publicationYear), HttpStatus.OK);
+	}
+	
+	// read by random / 200 - OK
+	@GetMapping("/random")
+	public ResponseEntity<Book> getRandom() {
+		return new ResponseEntity<>(this.service.getRandom(), HttpStatus.OK);
 	}
 }

@@ -13,10 +13,10 @@ public class Book {
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Integer id;
 		
-		@Column
+		@Column(nullable = false)
 		private String title;
 		
-		@Column
+		@Column(nullable = false)
 		private String author;
 		
 		@Column
@@ -28,10 +28,10 @@ public class Book {
 		public Book() {
 			super();
 		}
-		public Book(Integer id, String name, String author, String genre, Integer publicationYear) {
+		public Book(Integer id, String title, String author, String genre, Integer publicationYear) {
 			super();
 			this.id = id;
-			this.title = name;
+			this.title = title;
 			this.author = author;
 			this.genre = genre;
 			this.publicationYear = publicationYear;

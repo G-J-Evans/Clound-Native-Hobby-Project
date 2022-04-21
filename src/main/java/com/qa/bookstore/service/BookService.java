@@ -1,9 +1,12 @@
 package com.qa.bookstore.service;
 
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.qa.bookstore.domain.Book;
 import com.qa.bookstore.repo.BookRepo;
@@ -36,20 +39,28 @@ public class BookService implements ServiceIF<Book>{
 		return this.repo.findById(id).get();
 	}
 	
-	public List<Book> getByTitle(String title) {
+	public List<Book> getTitle(String title) {
 		return this.repo.findByTitleIgnoreCase(title);
 	}
 	
-	public List<Book> getByAuthor(String author) {
+	public List<Book> getAuthor(String author) {
 		return this.repo.findByAuthorIgnoreCase(author);
 	}
 	
-	public List<Book> getByGenre(String genre) {
+	public List<Book> getGenre(String genre) {
 		return this.repo.findByGenreIgnoreCase(genre);
 	}
 	
-	public List<Book> getByPublicationYear(Integer year) {
+	public List<Book> getPublicationYear(Integer year) {
 		return this.repo.findByPublicationYear(year);
+	}
+	
+	public Book getRandom() {
+		Integer noOfDogs = this.repo.countBy();
+		if(noOfDogs == 0) {
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Database has no entries");
+		}
+		return this.repo.findNPlusOnethBookOrderByIdAsc(new Random().nextInt(noOfDogs));
 	}
 	
 	// Update
