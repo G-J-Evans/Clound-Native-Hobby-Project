@@ -1,17 +1,17 @@
 Coverage: 91.5%
-# Clound Native Hobby Project
+# Cloud Native Hobby Project
 &nbsp;&nbsp;&nbsp; This was a one week project, with the objective to create a CRUD application with the utilisation of supporting tools, methodologies and technologies that encapsulate all core modules covered during training.
 
 ## Overview of Project
 ### Chosen Project
-&nbsp;&nbsp;&nbsp;I decided to create my project around storing data for books. This is because this is potentially useful information and it's got lots of areas to apply expansion into. This might be storing user oppinions on books, and providing suggestions in the future.
+&nbsp;&nbsp;&nbsp;I decided to create my project around storing data for books. This is because this is potentially useful information and it's got lots of areas to apply expansion into. This might be storing user opinions on books, and providing suggestions in the future.
 ### Jira
-&nbsp;&nbsp;&nbsp;The first order of the week was to mange time effectivly and make sure all tasks were completed during the week. I did this using [Jira](https://www.atlassian.com/software/jira). Within Jira I created epics and within those I created user stories and tasks. Below is an example story.
+&nbsp;&nbsp;&nbsp;The first order of the week was to manage time effectively and make sure all tasks were completed during the week. I did this using [Jira](https://www.atlassian.com/software/jira). Within Jira I created epics and within those I created user stories and tasks. Below is an example story.
 
 ![Jira MoSCoW](link to jira example)
 
 &nbsp;&nbsp;&nbsp;I created user stories using the following template 'As a ..., I want ..., So that ...' and then provided them with acceptance criteria in the form of 'Given, When, Then' so as to explain when the user story is considered completed.  
-&nbsp;&nbsp;&nbsp;I assigned this user story a relative story point estimate of '10' as I thought the task was going to be fairly straight forward. I also assigned it a prioritisation of Highest or Must Have. My priorities were based on the MoSCoW methodology of 'Must have, Should have, Could have, Would have'. This example was Must Have because it was required by the Minimum Viable Product(MVP).  
+&nbsp;&nbsp;&nbsp;I assigned this user story a relative story point estimate of '10' as I thought the task was going to be fairly straightforward. I also assigned it a prioritisation of Highest or Must Have. My priorities were based on the MoSCoW methodology of 'Must have, Should have, Could have, Would have'. This example was Must Have because it was required by the Minimum Viable Product(MVP).  
 
 &nbsp;&nbsp;&nbsp;After producing my backlog on Jira, I then created a sprint and moved all the backlog into it. The reason for only one sprint rather than multiple sprints is because the timescale of the project is only one week.
 
@@ -29,7 +29,7 @@ Coverage: 91.5%
 
 &nbsp;&nbsp;&nbsp;A UML of the application code was required. The attached [UML](link) in the root folder shows the layout of the classes and how they interact with each other. I generated this using [plantUML](https://plantuml.com/)
 
-&nbsp;&nbsp;&nbsp;There was also a requirement to generate a README, and a [.gitignore](link). The .gitignore stops unnecesssary files being pushed to GitHub and you're reading the README now.
+&nbsp;&nbsp;&nbsp;There was also a requirement to generate a README, and a [.gitignore](link). The .gitignore stops unnecessary files being pushed to GitHub and you're reading the README now.
 
 ## Backend
 &nbsp;&nbsp;&nbsp;For the backend the application was coded in Java using Eclipse with spring boot and maven. The required dependencies included springframework, h2database and mysql. The full list of dependencies is [here](pomlink)
@@ -39,12 +39,12 @@ Coverage: 91.5%
 ![database ERD](image)
 
 ### Coding and class layout
-&nbsp;&nbsp;&nbsp;As seen in my [UML](umllink) I created four classes to achive the desired outcome. Book the entity class. BookController to handle incomming API request. BookService to provide the buisness logic for the requests. And BookRepo to talk to the database. As well as the usual read by one requests (by column titles). I also created a read random entry in the database. This is so that if a user needs insperation about what to search then this might provide them with some. Below is the code needed in the repo to achive this.
+&nbsp;&nbsp;&nbsp;As seen in my [UML](umllink) I created four classes to achieve the desired outcome. Book the entity class. BookController to handle incoming API request. BookService to provide the business logic for the requests. And BookRepo to talk to the database. As well as the usual read by one requests (by column titles). I also created a read random entry in the database. This is so that if a user needs inspiration about what to search then this might provide them with some. Below is the code needed in the repo to achieve this.
 ![Repo Random](image)
 
 ### Testing
 &nbsp;&nbsp;&nbsp;For testing we had to write unit tests, the aim was to reach a coverage of 80%. My coverage got to 91.5%. 
-![91.5% Testcoverage](image)
+![91.5% Test Coverage](image)
 
 &nbsp;&nbsp;&nbsp;I did this using integration tests with MockMvc RequestBuilders and ResultMatchers. Below is an example test.
 ![Integration test](integrationTestImage)
@@ -59,7 +59,7 @@ Coverage: 91.5%
 And then after selecting the 'Add a Book' (Create)
 ![Create Form](image)
 
-I'll let you explore the other functionalities. Hopefully it's very self explanitory. 
+I'll let you explore the other functionalities. Hopefully it's very self explanatory.
 
 ## Getting Started
 
@@ -71,7 +71,7 @@ An internet search of 'How to install ...(Thing to be installed) for ...(OS your
 - Either a ['Java Development Kit'(JDK) or a 'Java Runtime Enviroment'(JRE)](https://www.oracle.com/java/technologies/downloads/)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A JDK contains a JRE. JDK is helpful if you wish to look at the code, add to it or rerun tests.
 - [MySQL Workbench](https://www.mysql.com/products/workbench/)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Workbench or an alternative are required to create the inital database which will hold the data. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Workbench or an alternative are required to create the initial database which will hold the data. 
 - [Visual Studio Code](https://code.visualstudio.com/) 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or alternative to open the webpage on a live server.
 ### Installing
