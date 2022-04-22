@@ -15,6 +15,7 @@ header {
 }
 
 h1 {
+    padding-left: 3%;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
