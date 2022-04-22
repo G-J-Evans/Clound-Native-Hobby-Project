@@ -71,7 +71,7 @@ public class BookControllerIntergrationTest {
 	@Test
 	void testGetOne() throws Exception {
 		// Creates request for getOne (by id)
-		RequestBuilder request = get("/get/1");
+		RequestBuilder request = get("/id/1");
 		
 		// BookJSON to check against
 		String testBookJSON = this.mapper.writeValueAsString(new Book(1, "Fire", "Kristin Cashore", "Fantasy", 2009));
