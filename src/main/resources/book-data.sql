@@ -1,0 +1,1 @@
+insert into book (title, author, genre, publication_year) values ('Fire', 'Kristin Cashore', 'Fantasy', 2009);
